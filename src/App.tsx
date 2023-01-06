@@ -23,11 +23,12 @@ const errorLink = onError(({ networkError }) => {
 
 const link = from([
   errorLink,
+  
   // new HttpLink({ uri: "http://127.0.0.1:8000/graphql" }),
   new HttpLink({
     uri: " /graphql",
     headers: {
-      "allow-access-control": "*",
+      "allow-access-control": `*`,
     },
   }),
   // http://20.244.116.244
